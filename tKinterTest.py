@@ -1,6 +1,7 @@
 from tkinter import *
 import random
 
+
 top = Tk()
 playlist = []
 myRolls = []
@@ -25,11 +26,11 @@ def mainMenu():
     clearWindow()
     LMain = Label(top, text = "Block 5 GUI Projects")
     LMain.grid(column = 0, row = 1)
-    B1Main = Button(text = "Week 1", bg = "pink", command = week1)
+    B1Main = Button(text = "Week 1", bg = "brown", command = week1)
     B1Main.grid(column = 0, row = 2)
-    B2Main = Button(text = "Week 2", bg = "pink", command = week2)
+    B2Main = Button(text = "Week 2", bg = "brown", command = week2)
     B2Main.grid(column = 0, row = 3)
-    B3Main = Button(text = "Week 3", bg = "pink")
+    B3Main = Button(text = "Week 3", bg = "brown")
     B3Main.grid(column = 0, row = 4)
     
 def week1():
@@ -48,7 +49,7 @@ def week1():
     E1.grid(column= 0, row = 2)
 
     #This is a Button widget
-    B1 = Button(text= " +  ", bg = "green", command = results)
+    B1 = Button(text= " +  ", bg = "purple", command = results)
     B1.grid(column = 1, row = 2)
 
     B2 = Button(text = " Print ", bg = "light blue", command = printList)
@@ -72,16 +73,21 @@ def week2():
             myRolls.append(random.randint(1, int(dieType)))
 
         #build the results window
-        L4Week2 = Label()
-        L5Week2 = Label()
-        B2Week2 = Button()
+        L4Week2 = Label(top, text = "Here's your rolls!")
+        L4Week2.grid(column = 0, row = 1)
+        
+        L5Week2 = Label(top, text = "{}".format(myRolls))
+        L5Week2.grid(column = 0, row = 2)
+        
+        B2Week2 = Button(text = "Main Menu", bg = "orange", command = mainMenu)
+        B2Week2.grid(column = 0, row = 3)
 
 
 
 
 
     clearWindow()
-    B1Week2 = Button(text = "Roll em!", bg = "green")
+    B1Week2 = Button(text = "Roll em!", bg = "green", command = rollDice)
     B1Week2.grid(column = 2, row = 4)
     
     L1Week2 = Label(top, text = "Dice Roller App")
