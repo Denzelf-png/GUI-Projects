@@ -1,7 +1,6 @@
 from tkinter import *
 import random
 
-
 top = Tk()
 playlist = []
 myRolls = []
@@ -26,11 +25,11 @@ def mainMenu():
     clearWindow()
     LMain = Label(top, text = "Block 5 GUI Projects")
     LMain.grid(column = 0, row = 1)
-    B1Main = Button(text = "Week 1", bg = "brown", command = week1)
+    B1Main = Button(text = "Week 1", bg = "cyan", command = week1)
     B1Main.grid(column = 0, row = 2)
-    B2Main = Button(text = "Week 2", bg = "brown", command = week2)
+    B2Main = Button(text = "Week 2", bg = "cyan", command = week2)
     B2Main.grid(column = 0, row = 3)
-    B3Main = Button(text = "Week 3", bg = "brown")
+    B3Main = Button(text = "Week 3", bg = "cyan")
     B3Main.grid(column = 0, row = 4)
     
 def week1():
@@ -49,7 +48,7 @@ def week1():
     E1.grid(column= 0, row = 2)
 
     #This is a Button widget
-    B1 = Button(text= " +  ", bg = "purple", command = results)
+    B1 = Button(text= " +  ", bg = "green", command = results)
     B1.grid(column = 1, row = 2)
 
     B2 = Button(text = " Print ", bg = "light blue", command = printList)
@@ -112,3 +111,4 @@ def week2():
 if __name__ == "__main__":
     mainMenu()
     top.mainloop()
+
