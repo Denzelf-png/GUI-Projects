@@ -6,6 +6,8 @@ playlist = []
 myRolls = []
 dieType = 0
 rollTimes = 0
+myList = []
+Unique_list = 0
 
    
 def printList():
@@ -20,6 +22,10 @@ def exportList():
 def clearWindow():
     for widgets in top.winfo_children():
         widgets.destroy()
+
+def printLists():
+    if len(unique_list) == 0:
+        print(myList)
 
 def mainMenu():
     clearWindow()
@@ -105,10 +111,50 @@ def week2():
     E2Week2.grid(column = 3, row = 3)
 
 
+def week3():
+    def printLists():
+        unique_list = E3Week3.get()
+        myList = E3Week3.get()
+        clearWindow()
+        whichOne = input("Which list do you want to see? Sorted or un-Sorted?  ")
+        if whichOne.lower() == "sorted":
+            print(unique_list)
+        
+       
+
+    L1Week3 = Label(top, text = "Printed List")
+    L1Week3.grid(column = 0, row = 1)
+        
+    L2Week3 = Label(top, text = "{}".format(myList))
+    L2Week3.grid(column = 0, row = 2)
+        
+    B1Week3 = Button(text = "Main Menu", bg = "green", command = mainMenu)
+    B1Week3.grid(column = 0, row = 3)
+
+    clearWindow()
+    B1Week3 = Button(text = "print em!", bg = "blue", command = printLists)
+    B1Week3.grid(column = 2, row = 4)
+    
+    L1Week3 = Label(top, text = "Printed Lists")
+    L1Week3.grid(column = 2, row = 1)
+    
+    L2Week3 = Label(top, text = "Sorted Lists")
+    L2Week3.grid(column = 0, row = 2)
+    
+    L3Week3 = Label(top, text = "Un-Sorted Lists")
+    L3Week3.grid(column = 3, row = 2)
+    
+    E1Week3 = Entry(top, bd = 5)
+    E1Week3.grid(column = 0, row = 3)
+    
+    E2Week3 = Entry(top, bd = 5)
+    E2Week3.grid(column = 3, row = 3)
+
+
+   
 
 
 
 if __name__ == "__main__":
     mainMenu()
     top.mainloop()
-
